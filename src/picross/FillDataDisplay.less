@@ -1,0 +1,37 @@
+@entry: fill-data-display-entry;
+.fill-data-display {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+
+    &-top, &-bottom {
+        flex-direction: row;
+        .@{entry} {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &-left, &-right {
+        flex-direction: column;
+        .@{entry} {
+            display: flex;
+            justify-items: flex-end;
+            flex-direction: row;
+        }
+    }
+
+    &-top, &-left {
+        .@{entry} {
+            justify-content: flex-end;
+        }
+    }
+}
+
+.@{entry} > p {
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    text-align: center;
+}
